@@ -1,0 +1,229 @@
+@keyframes animate-flip-y {
+  0% {
+    transform: rotateY(-600deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(0);
+  }
+}
+@keyframes animate-bounce {
+  0% {
+    transform: rotateZ(45deg);
+    opacity: 0;
+  }
+  20% {
+    transform: rotateZ(-40deg);
+    opacity: 0.4;
+  }
+  40% {
+    transform: rotateZ(20deg);
+    opacity: 0.8;
+  }
+  60% {
+    transform: rotateZ(-15deg);
+    opacity: 1;
+  }
+  80% {
+    transform: rotateZ(5deg);
+  }
+  100% {
+    transform: rotateX(0);
+  }
+}
+@keyframes zoom-rotate {
+  0% {
+    transform: scale(0.1) rotateZ(-500deg) translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes zoom-down {
+  0% {
+    transform: scale(0.1) translateY(-80%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes animate-bounce-zoom {
+  0% {
+    transform: scale(0.7);
+  }
+  45% {
+    transform: scale(1.05);
+  }
+  80% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes animate-bounce-zoom2 {
+  0% {
+    transform: scale(0.5);
+  }
+  20% {
+    transform: scale(1.05);
+  }
+  40% {
+    transform: scale(0.8);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.show-border {
+  animation: animate-bounce-zoom 0.4s ease-in;
+  animation-delay: 0;
+}
+
+.flip {
+  animation: animate-flip-y 0.8s ease-in-out;
+}
+
+.rotate {
+  animation: zoom-rotate 0.7s ease-in-out;
+}
+
+.zoom-down {
+  animation: zoom-down 0.4s ease-in-out;
+}
+
+.bounce {
+  animation: animate-bounce 0.8s ease-in-out;
+}
+
+.zoom-bounce {
+  animation: animate-bounce-zoom2 1.4s ease-in-out;
+}
+
+.icon {
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 50%;
+}
+.icon.icon-success {
+  border-color: rgba(var(--bs-success-rgb), 0.4);
+  color: var(--bs-success);
+}
+.icon.icon-error {
+  border-color: rgba(var(--bs-danger-rgb), 0.4);
+  color: var(--bs-danger);
+}
+.icon.icon-warning {
+  border-color: rgba(var(--bs-warning-rgb), 0.4);
+  color: var(--bs-warning);
+}
+.icon.icon-info {
+  border-color: rgba(var(--bs-info-rgb), 0.4);
+  color: var(--bs-info);
+}
+.icon.icon-question {
+  border-color: rgba(var(--bs-secondary-rgb), 0.4);
+  color: var(--bs-secondary);
+}
+
+.modal-swal .icon svg {
+  width: 5em;
+  height: 5em;
+}
+
+.toast svg,
+.toast-swal svg {
+  width: 2.3em;
+  height: 2.3em;
+}
+.toast.bg-primary .icon, .toast.bg-secondary .icon, .toast.bg-success .icon, .toast.bg-info .icon, .toast.bg-danger .icon, .toast.bg-warning .icon, .toast.bg-dark .icon,
+.toast-swal.bg-primary .icon,
+.toast-swal.bg-secondary .icon,
+.toast-swal.bg-success .icon,
+.toast-swal.bg-info .icon,
+.toast-swal.bg-danger .icon,
+.toast-swal.bg-warning .icon,
+.toast-swal.bg-dark .icon {
+  color: var(--bs-white, #fff);
+  border-color: var(--bs-white, #fff);
+}
+
+.toast-icon-container {
+  padding-left: var(--bs-toast-padding-x, 0.75rem);
+}
+
+[hidden].d-flex {
+  display: none !important;
+}
+
+.swal-bs-icon-container {
+  display: flex;
+  justify-content: center;
+  min-height: 5em;
+  margin-top: 1.75rem;
+}
+
+.toast {
+  z-index: 100000;
+}
+.toast.toast-swal.fade {
+  transition: all 0.7s !important;
+}
+
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.modal-swal .loading-spin[data-swalstrap=actions] {
+  min-height: 3rem;
+  position: relative;
+}
+.modal-swal .loading-spin > button {
+  visibility: hidden;
+}
+.modal-swal .loading-spin::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  top: calc(50% - 1.75rem);
+  left: calc(50% - 1.75rem);
+  border: 3px solid var(--bs-primary);
+  border-radius: 50%;
+  border-left-color: rgba(var(--bs-primary-rgb), 0.3);
+  animation: 1.2s linear infinite spinner-border;
+}
+
+.swal2-timer-progress-bar-container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  border-bottom-right-radius: var(--bs-modal-border-radius);
+  border-bottom-left-radius: var(--bs-modal-border-radius);
+}
+
+.swal2-timer-progress-bar {
+  width: 100%;
+  height: 0.25em;
+  background: var(--bs-secondary);
+}

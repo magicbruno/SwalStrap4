@@ -1,0 +1,43 @@
+{
+  "name": "@magicbruno/swalstrap5",
+  "version": "1.0.7",
+  "description": "Sweetalert2 inspired dialog based on Bootstrap 5",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magicbruno/SwalStrap5.git"
+  },
+  "author": "Bruno Migliaretti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/magicbruno/SwalStrap5/issues"
+  },
+  "homepage": "https://magicbruno.github.io/SwalStrap5/",
+  "dependencies": {
+  },
+  "keywords": ["sweetalert","alert","bootstrap", "dialog"],
+  "devDependencies": {
+    "bootstrap": "^5.2.0",
+    "file-saver": "^2.0.5",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-footer": "^2.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "readable-stream": "^3.6.0",
+    "sass": "^1.49.9",
+    "gulp-markdown": "^6.0.0"
+  },
+  "publishConfig": {
+    "@magicbruno:registry": "https://registry.npmjs.org",
+    "access": "public"
+  }
+}
