@@ -1,4 +1,4 @@
-# Sweet Alert for Bootstrap 5
+# Sweet Alert for Bootstrap 4
 A Swetalert2 and Bootbox.js alternative build on Bootstrap 5 Modal and Bootstrap 5 Toast components.
 
 ## Getting started 
