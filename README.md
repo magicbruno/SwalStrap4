@@ -1,27 +1,27 @@
-# Sweet Alert for Bootstrap 4
-A Swetalert2 and Bootbox.js alternative build on Bootstrap 5 Modal and Bootstrap 5 Toast components.
+# Swalstrap for Bootstrap 4
+A Swetalert2 and Bootbox.js alternative build on Bootstrap 4 Modal and Toast components.
 
 ## Getting started 
-The easiest way to get started is load Swalstrap form CDN:
+Load Swalstrap form CDN:
 
 ```
-<script src="https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.8/dist/js/swalstrap5_all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.8/dist/js/swalstrap_all.min.js"></script>
 ```
-swalstrap5_all.js will load automatically Swalstrap style sheet and wil create a default instance of Swalstrap named Swal (an aliased as swal, Sweetalert and sweetalert).
+swalstrap_all.js will load automatically Swalstrap style sheet and will create a default instance of Swalstrap named Swal (and also aliased as swal, Sweetalert and sweetalert).
 
-Now you can use Swalstrap applying fire method to Swal:
+You can use Swalstrap applying fire method to the created instance:
 ```
 <script>
     Swal.fire('Wanderful!','Swalstrap is working!','success')
 </script>
 ```
-If you prefer you can load Swalstrap style sheet separately:
+If you prefer you can load Swalstrap stylesheet (or a customized one) separately:
 ```
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.8/dist/css/swalstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap4@1.0.0/dist/css/swalstrap.min.css">
 ```
-and load swalstrap5.js version:
+and load swalstrap.js version:
 ```
-<script src="https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.8/dist/js/swalstrap5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap4@1.0.0/dist/js/swalstrap.min.js"></script>
 ```
 In this case you must create at least an instance of Swalstrap an then use it to open your popups:
 ```
@@ -45,8 +45,8 @@ git clone https://github.com/magicbruno/SwalStrap5.git
 or [download it](https://github.com/magicbruno/SwalStrap5/archive/refs/heads/main.zip).
 
 >### Warning
->Swalstrap is inspired to Sweetalert NOT a clone. Features are reproduced with radically different coding.
->Il you are a sweetalert user, you are highly recommended to read documentation and test examples.
+>Swalstrap is inspired to Sweetalert NOT a clone. Features are reproduced not copied.
+>So there are differences. Please, watch documentation and test examples.
 
 - [Documentation](https://magicbruno.github.io/SwalStrap5/api.html).
 - [Examples](https://magicbruno.github.io/SwalStrap5/basic-examples.html).

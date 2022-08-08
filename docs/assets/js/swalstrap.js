@@ -97,10 +97,10 @@
             return {
                 container: '',
                 popup: '',
-                header: 'py-0 border-0 px-3 mt-3 mb-1',
+                header: 'py-0 border-0 px-3 mt-1 mb-0',
                 title: 'text-center h2 mt-3 mb-3',
                 toastTitle: 'my-0 h5',
-                closeButton: 'btn-close',
+                closeButton: 'close',
                 icon: '',
                 image: 'img-fluid mx-auto mt-4 mb-3',
                 htmlContainer: 'text-center lead',
@@ -184,7 +184,10 @@
                             <div class="modal-content pb-3 px-0">
                                 <div class="modal-header ${this.customClass.header} ${this.display('btn-close')}">
                                     <button data-swalstrap="btn-close" type="button" class="${this.customClass.closeButton}" 
-                                        data-bs-dismiss="modal" aria-label="Close"></button>
+                                        data-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"></path>
+                                        </svg>
+                                    </button>
                                 </div>
                                 <div class="modal-body px-4 py-0">
                                     <div class="container-fluid d-flex flex-column">
@@ -202,7 +205,7 @@
                                             value="${this.config.inputValue}">
                                         <select data-swalstrap="select" class="form select form-select-lg ${this.customClass.input} ${this.display('select')}">
                                         </select>
-                                        <div class="form-check form-check-inline ${this.customClass.input} lead d-flex justify-content-center ${this.display('checkbox')}"
+                                        <div class="form-check form-check-inline ${this.customClass.input} lead justify-content-center ${this.display('checkbox')}"
                                             data-swalstrap="checkbox" >
                                             <input class="form-check-input" type="checkbox" id="ckbox_${this.currentId}" 
                                                 ${this.config.inputValue == true ? 'checked' : ''} >
@@ -231,7 +234,7 @@
                                     <button data-swalstrap="btn-deny" type="button" class="btn ${this.customClass.denyButton} ${this.display('btn-deny')}">
                                         ${this.config.denyButtonText}</button>
                                     <button data-swalstrap="btn-cancel" type="button" class="${this.customClass.cancelButton} ${this.display('btn-cancel')}"
-                                        data-bs-dismiss="modal">${this.config.cancelButtonText}</button>
+                                        data-dismiss="modal">${this.config.cancelButtonText}</button>
                                 </div>
                                 <div class="modal-footer ${this.customClass.footer} ${this.display('footer')}" 
                                     data-swalstrap="footer">
@@ -249,7 +252,7 @@
          * property: Toast content based on config
          */
         get toastContent() {
-            return `<div class="toast toast-swal position-absolute align-items-center ${this.toastBackground} py-1 pe-2 m-3 ${this.customClass.popup} ${this.toastPosition}" role="alert" 
+            return `<div class="toast toast-swal position-fixed align-items-center ${this.toastBackground} py-1 pe-2 m-3 ${this.customClass.popup}" style="${this.toastPosition}" role="alert" 
                         aria-live="assertive" aria-atomic="true" id="toast_${this.currentId}">
                         <div class="d-flex align-items-center">
                             <div class="toast-icon-container ${this.display('icon')} ${!this.toastBackground && this.config.icon == 'success' ? 'text-success' : ''}" data-swalstrap="icon">
@@ -263,8 +266,10 @@
                                     ${this.config.html || this.config.text}
                                 </span>
                             </div>
-                            <button data-swalstrap="btn-close" type="button" class="btn-close ${this.toastBackground ? 'btn-close-white' : ''}  me-2 m-auto" 
-                            data-bs-dismiss="toast" aria-label="Close"></button>
+                            <button data-swalstrap="btn-close" type="button" class="close me-2 m-auto ${this.toastBackground ? 'text-white' : ''}" 
+                            data-dismiss="toast" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" style="height:50px;width:50px;" width="16" height="16" fill="currentColor" class="px-3" viewBox="0 0 16 16">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"></path>
+                            </svg></button>
                         </div>
                     </div>`;
         }
@@ -321,24 +326,25 @@
         get toastPosition() {
             switch (this.config.position) {
                 case 'top-start':
-                    return 'top-0 start-0';
+                    return 'top:0;left:0';
                 case 'top':
                 case 'top-center':
-                    return 'top-0 start-50 translate-middle-x';
+                    return 'top:0;left:50%;transform:translateX(-50%)';
                 case 'top-end':
-                    return 'top-0 end-0';
+                    return 'top:0;right:0';
                 case 'center-start':
-                    return 'top-50 start-0 translate-middle-y';
+                    return 'top:50%;left:0;transform:translateY(-50%)';
                 case 'center':
-                    return 'top-50 start-50 translate-middle';
+                    return 'top:50%;left:50%;transform:translate(-50%,-50%)';
                 case 'center-end':
-                    return 'top-50 end-0 translate-middle-y';
+                    return 'top:50%;right:0;transform:translateY(-50%)';
                 case 'bottom-start':
-                    return 'bottom-0 start-0';
+                    return 'bottom:0;left:0';
                 case 'bottom':
-                    return 'bottom-0 start-50 translate-middle-x';
+                case 'bottom-center':
+                    return 'left:50%;bottom:0;transform:translateX(-50%)';
                 case 'bottom-end':
-                    return 'bottom-0 end-0';
+                    return 'bottom:0;right:0';
                 default:
                     break;
             }
@@ -447,6 +453,8 @@
                 case 'checkbox':
                     if (this.config.input != 'checkbox')
                         return 'd-none';
+                    else
+                        return 'd-flex';
                     break;
                 case 'radio':
                     if (this.config.input != 'radio')
@@ -488,8 +496,12 @@
         disposeCurrentModal() {
             try {
                 if (this.modal != null) {
-                    this.modal.dispose();
+                    if(this.config.toast)
+                        this.modal.toast('dispose');
+                    else
+                        this.modal.modal('dispose');
                     this.modalElement.remove();
+                    this.modal = null;
                 }
                 this.currentButton = null;
                 this.modalResult = new SweetAlertResult(false, false, false);
@@ -533,7 +545,7 @@
                 this.error(NO_BOOTSTRAP_TOAST);
                 return false;
             };
-            if (parseInt(bootstrap.Modal.VERSION) != 5)
+            if (parseInt(bootstrap.Modal.VERSION) != 4)
                 this.error(VERSION_WARNING);
             return true;
         }
@@ -549,27 +561,27 @@
             const isToast = this.isToast;
             if (typeof this.config.willOpen === 'function') {
                 let eventName = isToast ? 'show.bs.toast' : 'show.bs.modal';
-                this.modalElement.addEventListener(eventName, event => {
+                this.modal.one(eventName, event => {
                     self.config.willOpen(self.modalElement);
-                }, { once: true });
+                });
             }
             if (typeof this.config.didOpen === 'function') {
                 let eventName = isToast ? 'shown.bs.toast' : 'shown.bs.modal';
-                this.modalElement.addEventListener(eventName, event => {
+                this.modal.one(eventName, event => {
                     self.config.didOpen(self.modalElement);
-                }, { once: true });
+                });
             }
             if (typeof this.config.willClose === 'function') {
                 let eventName = isToast ? 'hide.bs.toast' : 'hide.bs.modal';
-                this.modalElement.addEventListener(eventName, event => {
+                this.modal.one(eventName, event => {
                     self.config.willClose(self.modalElement);
-                }, { once: true });
+                });
             }
             if (typeof this.config.didClose === 'function') {
                 let eventName = isToast ? 'hidden.bs.toast' : 'hidden.bs.modal';
-                this.modalElement.addEventListener(eventName, event => {
+                this.modal.one(eventName, event => {
                     self.config.didClose(self.modalElement);
-                }, { once: true });
+                });
             }
         }
 
@@ -598,6 +610,7 @@
             this.disposeCurrentModal();
             this.resetCustomClasses();
             this.modalElement = this.createModalElement();
+            this.modal = $(this.modalElement);
             document.body.appendChild(this.modalElement);
 
             if (!this.config.toast)
@@ -619,23 +632,23 @@
              else {
                 bsOptions.autohide = false;
              }
-             this.modal = new bootstrap.Toast(this.modalElement, bsOptions);  
+             this.modal = $(this.modalElement).toast(bsOptions);  
              this.initCallbacks();
 
             // Icons
             if (this.config.icon) {
-                this.modalElement.addEventListener('show.bs.toast', event => {
+                this.modal.one('show.bs.toast', event => {
                     // Icon animation start
                     let icon = self.modalElement.querySelector('.icon');
                     if (icon)
                         icon.removeAttribute('hidden');
 
-                }, { once: true });
+                });
             }
 
-            this.modal.show();
+            this.modal.toast('show');
             return new Promise((resolve, reject) => {
-                self.modalElement.addEventListener('hidden.bs.toast', event => {
+                self.modal.on('hidden.bs.toast', event => {
                     try {
                         resolve(self.modalResult);
                     } catch (error) {
@@ -659,17 +672,17 @@
                 bsOptions.backdrop = true;
             bsOptions.keyboard = this.config.allowEscapeKey;
 
-            this.modal = new bootstrap.Modal(this.modalElement, bsOptions);
+            this.modal = $(this.modalElement).modal(bsOptions);
 
             // Init Swal callbacks
             this.initCallbacks();
 
             // Icons
             if (this.config.icon) {
-                this.modalElement.addEventListener('show.bs.modal', event => {
+                this.modal.one('shown.bs.modal', event => {
                     // Icon animation start
                     self.modalElement.querySelector('.icon').removeAttribute('hidden');
-                }, { once: true });
+                });
             }
 
             // Input select
@@ -696,7 +709,7 @@
 
             // Actions block
             if (this.config.showCloseButton) {
-                this.modalElement.querySelector('.btn-close').addEventListener('click', event => {
+                this.modalElement.querySelector('[data-swalstrap="btn-close"]').addEventListener('click', event => {
                     self.currentButton = event.target;
                     self.modalResult = new SweetAlertResult(false, false, false);
                     self.modalResult.dismiss = DismissReason.close;
@@ -713,7 +726,7 @@
                 this.modalElement.querySelector('[data-swalstrap="btn-deny"]').addEventListener('click', event => {
                     self.currentButton = event.target;
                     self.modalResult = new SweetAlertResult(false, true, false);
-                    self.modal.hide();
+                    self.close();
                 });
             }
             if (this.config.showConfirmButton) {
@@ -735,16 +748,16 @@
                             result.then(data => {
                                 if(data) {
                                     self.modalResult = new SweetAlertResult(true, false, data);
-                                    self.modal.hide();                                    
+                                    self.close();                                    
                                 }
                             })
                         } else if (!(result === false || self.validationMessage)) {
                             self.modalResult = new SweetAlertResult(true, false, result || self.modalInputValue);
-                            self.modal.hide();
+                            self.close();
                         }
                     } else if (!self.validationMessage) {
                         self.modalResult = new SweetAlertResult(true, false, self.modalInputValue);
-                        self.modal.hide();
+                        self.close();
                     }
 
                 });
@@ -752,9 +765,9 @@
             if (this.config.timer > 0) {
                 this.initTimer();
             }
-            this.modal.show();
+            this.modal.modal('show');
             return new Promise((resolve, reject) => {
-                self.modalElement.addEventListener('hidden.bs.modal', event => {
+                self.modal.on('hidden.bs.modal', event => {
                     try {
                         this.stopTimer();
                         this.clearTimerProgressBar();
@@ -784,7 +797,7 @@
          */
         isVisible() {
             if (this.modal)
-                return this.modal._isShown;
+                return this.modal.is(':visible');
             return false;
         }
 
@@ -797,7 +810,10 @@
                 this.modalResult = new SweetAlertResult(false, false, this.modalInputValue || null);
                 this.modalResult.dismiss = DismissReason.timer;
             }
-            this.modal.hide();
+            if (this.config.toast)
+                this.modal.toast('hide');
+            else
+                this.modal.modal('hide');
         }
 
         /**
@@ -1282,11 +1298,3 @@
     };
     win.Swalstrap = Swalstrap;
 })(document, window);
-    ;(function (win, doc) {
-        win.Swal = win.swal = win.Sweetalert = win.sweetalert = new Swalstrap();
-          const style = doc.createElement('style');
-          style.innerText = `@keyframes animate-flip-y{0%{transform:rotateY(-600deg);opacity:0}50%{opacity:1}100%{transform:rotateY(0)}}@keyframes animate-bounce{0%{transform:rotateZ(45deg);opacity:0}20%{transform:rotateZ(-40deg);opacity:.4}40%{transform:rotateZ(20deg);opacity:.8}60%{transform:rotateZ(-15deg);opacity:1}80%{transform:rotateZ(5deg)}100%{transform:rotateX(0)}}@keyframes zoom-rotate{0%{transform:scale(0.1) rotateZ(-500deg) translateY(-100%);opacity:0}100%{transform:scale(1) rotateZ(0) translateY(0);opacity:1}}@keyframes zoom-down{0%{transform:scale(0.1) translateY(-80%);opacity:0}50%{opacity:.3}100%{transform:scale(1) translateY(0);opacity:1}}@keyframes animate-bounce-zoom{0%{transform:scale(0.7)}45%{transform:scale(1.05)}80%{transform:scale(0.95)}100%{transform:scale(1)}}@keyframes animate-bounce-zoom2{0%{transform:scale(0.5)}20%{transform:scale(1.05)}40%{transform:scale(0.8)}60%{transform:scale(1.2)}80%{transform:scale(0.95)}100%{transform:scale(1)}}.show-border{animation:animate-bounce-zoom .4s ease-in;animation-delay:0}.flip{animation:animate-flip-y .8s ease-in-out}.rotate{animation:zoom-rotate .7s ease-in-out}.zoom-down{animation:zoom-down .4s ease-in-out}.bounce{animation:animate-bounce .8s ease-in-out}.zoom-bounce{animation:animate-bounce-zoom2 1.4s ease-in-out}.icon{border-style:solid;border-width:4px;border-radius:50%}.icon.icon-success{border-color:rgba(var(--bs-success-rgb), 0.4);color:var(--bs-success)}.icon.icon-error{border-color:rgba(var(--bs-danger-rgb), 0.4);color:var(--bs-danger)}.icon.icon-warning{border-color:rgba(var(--bs-warning-rgb), 0.4);color:var(--bs-warning)}.icon.icon-info{border-color:rgba(var(--bs-info-rgb), 0.4);color:var(--bs-info)}.icon.icon-question{border-color:rgba(var(--bs-secondary-rgb), 0.4);color:var(--bs-secondary)}.modal-swal .icon svg{width:5em;height:5em}.toast svg,.toast-swal svg{width:2.3em;height:2.3em}.toast.bg-primary .icon,.toast.bg-secondary .icon,.toast.bg-success .icon,.toast.bg-info .icon,.toast.bg-danger .icon,.toast.bg-warning .icon,.toast.bg-dark .icon,.toast-swal.bg-primary .icon,.toast-swal.bg-secondary .icon,.toast-swal.bg-success .icon,.toast-swal.bg-info .icon,.toast-swal.bg-danger .icon,.toast-swal.bg-warning .icon,.toast-swal.bg-dark .icon{color:var(--bs-white, #fff);border-color:var(--bs-white, #fff)}.toast-icon-container{padding-left:var(--bs-toast-padding-x, 0.75rem)}[hidden].d-flex{display:none !important}.swal-bs-icon-container{display:flex;justify-content:center;min-height:5em;margin-top:1.75rem}.toast{z-index:100000}.toast.toast-swal.fade{transition:all .7s !important}@keyframes spinner-border{to{transform:rotate(360deg)}}.modal-swal .loading-spin[data-swalstrap=actions]{min-height:3rem;position:relative}.modal-swal .loading-spin>button{visibility:hidden}.modal-swal .loading-spin::after{content:"";display:block;position:absolute;width:3.5rem;height:3.5rem;top:calc(50% - 1.75rem);left:calc(50% - 1.75rem);border:3px solid var(--bs-primary);border-radius:50%;border-left-color:rgba(var(--bs-primary-rgb), 0.3);animation:1.2s linear infinite spinner-border}.swal2-timer-progress-bar-container{position:absolute;right:0;bottom:0;left:0;overflow:hidden;border-bottom-right-radius:var(--bs-modal-border-radius);border-bottom-left-radius:var(--bs-modal-border-radius)}.swal2-timer-progress-bar{width:100%;height:.25em;background:var(--bs-secondary)}
-/*# sourceMappingURL=swalstrap.min.css.map */
-`;
-          doc.head.appendChild(style);
-    })(window, document)

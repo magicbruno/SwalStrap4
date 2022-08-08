@@ -1,7 +1,7 @@
 {
-  "name": "@magicbruno/swalstrap5",
-  "version": "1.0.7",
-  "description": "Sweetalert2 inspired dialog based on Bootstrap 5",
+  "name": "@magicbruno/swalstrap4",
+  "version": "1.0.0",
+  "description": "Sweetalert2 inspired dialog based on Bootstrap 4",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -23,7 +23,7 @@
   },
   "keywords": ["sweetalert","alert","bootstrap", "dialog"],
   "devDependencies": {
-    "bootstrap": "^5.2.0",
+    "bootstrap": "^4.6.2",
     "file-saver": "^2.0.5",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",

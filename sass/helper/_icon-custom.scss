@@ -1,31 +1,45 @@
 .icon {
-    border-style: solid;
-    border-width: 4px;
-    border-radius: 50%;
 
+    // border-style: solid;
+    // border-width: 4px;
+    // border-radius: 50%;
+    position: relative;
+        &::after {
+            content:"";
+            position: absolute;
+            display: block;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-style: solid;
+            border-width: 4px;
+            opacity: 0.4;
+            border-radius: 50%;
+        }
     &.icon-success {
         border-color: rgba(var(--bs-success-rgb), .4);
-        color: var(--bs-success);
+        color: var(--success);
     }
 
     &.icon-error {
         border-color: rgba(var(--bs-danger-rgb), .4);
-        color: var(--bs-danger);
+        color: var(--danger);
     }
 
     &.icon-warning {
         border-color: rgba(var(--bs-warning-rgb), .4);
-        color: var(--bs-warning);
+        color: var(--warning);
     }
 
     &.icon-info {
         border-color: rgba(var(--bs-info-rgb), .4);
-        color: var(--bs-info);
+        color: var(--info);
     }
 
     &.icon-question {
-        border-color: rgba(var(--bs-secondary-rgb), .4);
-        color: var(--bs-secondary);
+        border-color: var(--secondary-40);
+        color: var(--secondary);
     }
 }
 

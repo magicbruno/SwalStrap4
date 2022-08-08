@@ -23,10 +23,10 @@
             left: calc(50% - 1.75rem);
             // transform-origin: -1.3rem -1.3em;
             // transform: translate(1.3rem, 1.3rem) ;
-            border: 3px solid var(--bs-primary);
+            border: 3px solid var(--primary);
             //border-right-color: transparent;
             border-radius: 50%;
-            border-left-color: rgba(var(--bs-primary-rgb), .3);
+            border-left-color: transparent;
             //opacity: .6;
             animation: 1.2s linear infinite spinner-border;
         }

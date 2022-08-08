@@ -45,10 +45,10 @@ function compressjs() {
   return pipeline(
     src(jsSrc),
     uglify(),
-    rename('swalstrap5.min.js'),
+    rename('swalstrap.min.js'),
     dest(jsDest),
     src(jsSrc),
-    rename('swalstrap5.js'),
+    rename('swalstrap.js'),
     dest(jsDest)
   );
 }
@@ -64,7 +64,7 @@ function createAutoInstall() {
                   doc.head.appendChild(style);
             })(window, document)`),
     uglify(),
-    rename('swalstrap5_all.min.js'),
+    rename('swalstrap_all.min.js'),
     dest(jsDest),
     src(jsSrc),
     footer(`
@@ -74,7 +74,7 @@ function createAutoInstall() {
           style.innerText = \`${cssContent}\`;
           doc.head.appendChild(style);
     })(window, document)`),
-    rename('swalstrap5_all.js'),
+    rename('swalstrap_all.js'),
     dest(jsDest)
   );
 }
