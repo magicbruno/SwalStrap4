@@ -1,5 +1,5 @@
 # Swalstrap for Bootstrap 4
-A Swetalert2 and Bootbox.js alternative build on Bootstrap 4 Modal and Toast components.
+A Swetalert and Bootbox alternative build on Bootstrap 4 Modal and Toast components. Are you using Bootstrap 5? [Go here](https://github.com/magicbruno/SwalStrap5).
 
 ## Getting started 
 Load Swalstrap form CDN:
