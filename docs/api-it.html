@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS v4.6.2 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha256-+IZRbz1B6ee9mUx/ejmonK+ulIP5A5bLDd6v6NHqXnI=" crossorigin="anonymous">
 
     <style>
@@ -72,21 +72,29 @@
         <div class="d-flex align-items-center justify-content-evenly flex-grow-1 modal-swal">
             <div class="container pt-5">
                 <h1>Constructor</h1>
-                <div class="mb-2">Se carichi <code>swalstrap5.js</code> o <code>swalstrap5.min.js</code>:</div> 
-                <pre class="mb-2"><code class="language-html hljs">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.8/dist/js/swalstrap5.min.js&quot;&gt;&lt;/script&gt;</code></pre>
-                <div class="mb-2">Sarà caricata solo la <code>classe</code> <strong>Swalstrap </strong>. Per usare Swalstrap sarà necessario caricare il
+                <div class="mb-2">Se carichi <code>swalstrap5.js</code> o <code>swalstrap5.min.js</code>:</div>
+                <pre
+                    class="mb-2"><code class="language-html hljs">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.8/dist/js/swalstrap5.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                <div class="mb-2">Sarà caricata solo la <code>classe</code> <strong>Swalstrap </strong>. Per usare
+                    Swalstrap sarà necessario caricare il
                     foglio di stile:</div>
-                <pre class="mb-2"><code class="language-html hljs">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.8/docs/assets/css/swalstrap.min.css&quot;&gt;</code></pre>
+                <pre
+                    class="mb-2"><code class="language-html hljs">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.8/docs/assets/css/swalstrap.min.css&quot;&gt;</code></pre>
                 <div class="mb-2">e creare almeno un'istanza della classe Swalstrap:</div>
                 <pre class="mb-2"><code class="language-html hljs">&lt;script&gt;
     const mySwal = new Swalstrap();
-&lt;/script&gt;</code></pre>  
-                <div class="mb-2">Se si utilizza invece <code>swalstrap5_all.js</code> o <code>swalstrap5_all.min.js</code>:</div> 
-                <pre class="mb-2"><code class="language-html hljs">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.8/dist/js/swalstrap5_all.min.js&quot;&gt;&lt;/script&gt;</code></pre>
-                <div class="mb-2">gli stili CSS verranno caricati automaticamente e verrà creata un'istanza predefinita di Swalstrap chiamata Swal 
-                    (verranno creati anche alcuni alias: swal, Sweelelert e sweelelert).</div> 
-                <p>In entrambi i casi, è possibile creare istanze personalizzate di swalstrap passando un set di opzioni come parametro del costruttore.Queste opzioni saranno 
-                    le opzioni predefinite applicate a popup e toast create con l'istanza. <a href="customization.html">Vedi qui un esempio</a>.
+&lt;/script&gt;</code></pre>
+                <div class="mb-2">Se si utilizza invece <code>swalstrap5_all.js</code> o
+                    <code>swalstrap5_all.min.js</code>:</div>
+                <pre
+                    class="mb-2"><code class="language-html hljs">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.8/dist/js/swalstrap5_all.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                <div class="mb-2">gli stili CSS verranno caricati automaticamente e verrà creata un'istanza predefinita
+                    di Swalstrap chiamata Swal
+                    (verranno creati anche alcuni alias: swal, Sweelelert e sweelelert).</div>
+                <p>In entrambi i casi, è possibile creare istanze personalizzate di swalstrap passando un set di opzioni
+                    come parametro del costruttore.Queste opzioni saranno
+                    le opzioni predefinite applicate a popup e toast create con l'istanza. <a
+                        href="customization.html">Vedi qui un esempio</a>.
                 </p>
                 <h1>Opzioni</h1>
                 <div class="table-responsive">
@@ -100,7 +108,7 @@
                             </tr>
                             <tr id="title">
                                 <td>
-                                <h5>title</h5>
+                                    <h5>title</h5>
                                 </td>
                                 <td>string</td>
                                 <td>''</td>
@@ -108,7 +116,7 @@
                             </tr>
                             <tr id="titleText">
                                 <td>
-                                <h5>titleText</h5>
+                                    <h5>titleText</h5>
                                 </td>
                                 <td>string</td>
                                 <td>''</td>
@@ -116,36 +124,42 @@
                             </tr>
                             <tr id="html">
                                 <td>
-                                <h5>html</h5>
+                                    <h5>html</h5>
                                 </td>
                                 <td>string</td>
                                 <td>''</td>
                                 <td>Un contenuto HTML per la popup. <br />
-                                Se <strong> testo </strong> e <strong> html </strong> sono forniti allo stesso tempo verrà utilizzato <strong> html </strong>. & Nbsp; <br />
-                                Swalstrap non <en>igienizza</en> questo parametro. È responsabilità dello sviluppatore controllare l'input dell'utente quando si 
-                                utilizza l'opzione <strong> html </strong>.</td>
+                                    Se <strong> testo </strong> e <strong> html </strong> sono forniti allo stesso tempo
+                                    verrà utilizzato <strong> html </strong>. & Nbsp; <br />
+                                    Swalstrap non <en>igienizza</en> questo parametro. È responsabilità dello
+                                    sviluppatore controllare l'input dell'utente quando si
+                                    utilizza l'opzione <strong> html </strong>.</td>
                             </tr>
                             <tr id="text">
                                 <td>
-                                <h5>text</h5>
+                                    <h5>text</h5>
                                 </td>
                                 <td>string</td>
                                 <td>''</td>
                                 <td>Un contenuto di testo per la popup. <br />
-                                Se <strong> testo </strong> e <strong> html </strong> sono forniti allo stesso tempo, verrà utilizzato <strong> html </strong>.</td>
+                                    Se <strong> testo </strong> e <strong> html </strong> sono forniti allo stesso
+                                    tempo, verrà utilizzato <strong> html </strong>.</td>
                             </tr>
                             <tr id="icon">
                                 <td>
-                                <h5>icon</h5>
+                                    <h5>icon</h5>
                                 </td>
                                 <td>'warning' | 'error' | 'success' | 'info' | 'question' | <em>undefined</em></td>
                                 <td><em>undefined</em></td>
-                                <td>L'icona del popup. Swalstrap viene fornito con 5 icone integrate che che verrà mostrata con un'animazione:
-                                    <strong>warning</strong>, <strong>error</strong>, <strong>success</strong>, <strong>info</strong>, and <strong>question</strong>.</td>
+                                <td>L'icona del popup. Swalstrap viene fornito con 5 icone integrate che che verrà
+                                    mostrata con un'animazione:
+                                    <strong>warning</strong>, <strong>error</strong>, <strong>success</strong>,
+                                    <strong>info</strong>, and <strong>question</strong>.
+                                </td>
                             </tr>
                             <tr id="footer">
                                 <td>
-                                <h5>footer</h5>
+                                    <h5>footer</h5>
                                 </td>
                                 <td>string</td>
                                 <td>''</td>
@@ -153,7 +167,7 @@
                             </tr>
                             <tr id="backdrop">
                                 <td>
-                                <h5>backdrop</h5>
+                                    <h5>backdrop</h5>
                                 </td>
                                 <td>boolean</td>
                                 <td>true</td>
@@ -161,55 +175,69 @@
                             </tr>
                             <tr id="toast">
                                 <td>
-                                <h5>toast</h5>
+                                    <h5>toast</h5>
                                 </td>
                                 <td>boolean</td>
                                 <td>false</td>
-                                <td>Viene visualizzato un <em>toast</em>?. Questa opzione è normalmente accoppiata all'opzione 
-                                    <strong> posizione </strong> e all'opzione <strong>timer</strong>.</td>
+                                <td>Viene visualizzato un <em>toast</em>?. Questa opzione è normalmente accoppiata
+                                    all'opzione
+                                    <strong> posizione </strong> e all'opzione <strong>timer</strong>.
+                                </td>
                             </tr>
                             <tr id="toastStyle">
                                 <td>
-                                <h5>toastStyle</h5>
+                                    <h5>toastStyle</h5>
                                 </td>
-                                <td>'primary' | 'secondary' | 'success' | 'info' | 'danger' | 'warning' | 'dark' | 'auto' | ''</td>
+                                <td>'primary' | 'secondary' | 'success' | 'info' | 'danger' | 'warning' | 'dark' |
+                                    'auto' | ''</td>
                                 <td>''</td>
-                                <td>Per impostazione predefinita il colore di sfondo toast è ereditato da bootstrap. Impostando <code>toaststyle</code>, gli sfondi dei toast 
-                                    sono disegnati usando i colori bootstrap. L'icona e il colore del testo saranno bianchi. Se <code>toaststyle</code> è 'auto', lo stile toast 
-                                    è determinato dal tipo di icona. 
+                                <td>Per impostazione predefinita il colore di sfondo toast è ereditato da bootstrap.
+                                    Impostando <code>toaststyle</code>, gli sfondi dei toast
+                                    sono disegnati usando i colori bootstrap. L'icona e il colore del testo saranno
+                                    bianchi. Se <code>toaststyle</code> è 'auto', lo stile toast
+                                    è determinato dal tipo di icona.
                                 </td>
                             </tr>
                             <tr id="input">
                                 <td>
-                                <h5>input</h5>
+                                    <h5>input</h5>
                                 <td>
-                                <p>'text' | 'email' | 'password' | 'number' | 'textarea' | 'select' | 'radio' | 'checkbox' | 'file' | 'url' | <em>undefined</em></p>
+                                    <p>'text' | 'email' | 'password' | 'number' | 'textarea' | 'select' | 'radio' |
+                                        'checkbox' | 'file' | 'url' | <em>undefined</em></p>
                                 </td>
                                 <td><em>undefined</em></td>
-                                <td>Tipo del campo di input, può essere <strong>text</strong>, <strong>email</strong>, <strong>password</strong>, <strong>number</strong>, 
-                                    <strong>textarea</strong>, <strong>select</strong>, <strong>radio</strong>, <strong>checkbox</strong>, e <strong>url</strong>.</td>
+                                <td>Tipo del campo di input, può essere <strong>text</strong>, <strong>email</strong>,
+                                    <strong>password</strong>, <strong>number</strong>,
+                                    <strong>textarea</strong>, <strong>select</strong>, <strong>radio</strong>,
+                                    <strong>checkbox</strong>, e <strong>url</strong>.
+                                </td>
                             </tr>
                             <tr id="position">
                                 <td>
-                                <h5>position</h5>
+                                    <h5>position</h5>
                                 </td>
                                 <td>
-                                <p>'top' | 'top-start' | 'top-end' | 'center' | 'center-start' | 'center-end' | 'bottom' | 'bottom-start' | &nbsp;'bottom-end'</p>
+                                    <p>'top' | 'top-start' | 'top-end' | 'center' | 'center-start' | 'center-end' |
+                                        'bottom' | 'bottom-start' | &nbsp;'bottom-end'</p>
                                 </td>
                                 <td>&nbsp;</td>
-                                <td>Per i <em>Toast</em> <code>position</code>, può essere <strong>'top'</strong>, <strong>'top-start'</strong>, <strong>'top-end'</strong>, 
-                                    <strong>'center'</strong>, <strong>'center-start'</strong>, <strong>'center-end'</strong>, <strong>'bottom'</strong>, 
-                                    <strong>'bottom-start'</strong>, or <strong>'bottom-end', </strong>. 
-                                    Per una popup la posizione può essere <strong>'center' </strong>o <strong>'top' </strong>(altre impostazioni verranno ignorate)</td>
+                                <td>Per i <em>Toast</em> <code>position</code>, può essere <strong>'top'</strong>,
+                                    <strong>'top-start'</strong>, <strong>'top-end'</strong>,
+                                    <strong>'center'</strong>, <strong>'center-start'</strong>,
+                                    <strong>'center-end'</strong>, <strong>'bottom'</strong>,
+                                    <strong>'bottom-start'</strong>, or <strong>'bottom-end', </strong>.
+                                    Per una popup la posizione può essere <strong>'center' </strong>o <strong>'top'
+                                    </strong>(altre impostazioni verranno ignorate)
+                                </td>
                             </tr>
                             <tr id="customClass">
                                 <td>
-                                <h5>customClass</h5>
+                                    <h5>customClass</h5>
                                 </td>
                                 <td>object</td>
                                 <td>{}</td>
                                 <td>Classi CSS personalizzate per la pop-up. Queste sono le classi predefinite:
-                                <pre>
+                                    <pre>
                     <code class="language-javascript">{
     container: '',
     popup: '',
@@ -237,64 +265,71 @@
                             </tr>
                             <tr id="timer">
                                 <td>
-                                <h5>timer</h5>
+                                    <h5>timer</h5>
                                 </td>
                                 <td>number</td>
                                 <td>0</td>
-                                <td>Timeout di chiusura automatica del popup (o della notifica toast). Impostato in millisecondi.</td>
+                                <td>Timeout di chiusura automatica del popup (o della notifica toast). Impostato in
+                                    millisecondi.</td>
                             </tr>
                             <tr id="timerProgressBar">
                                 <td>
-                                <h5>timerProgressBar</h5>
+                                    <h5>timerProgressBar</h5>
                                 </td>
                                 <td>boolean</td>
                                 <td>false</td>
-                                <td>Se impostato su True, il progresso timer sarà segnalato da una barra di avanzamento nella parte inferiore 
+                                <td>Se impostato su True, il progresso timer sarà segnalato da una barra di avanzamento
+                                    nella parte inferiore
                                     del popup.(Non influisce sui toast)</td>
                             </tr>
                             <tr id="allowOutsideClick">
                                 <td>
-                                <h5>allowOutsideClick</h5>
+                                    <h5>allowOutsideClick</h5>
                                 </td>
                                 <td>boolean</td>
                                 <td>true</td>
-                                <td>Se impostato su <strong> false </strong>, l'utente non può chiudere il popup facendo clic sul backdrop.</td>
+                                <td>Se impostato su <strong> false </strong>, l'utente non può chiudere il popup facendo
+                                    clic sul backdrop.</td>
                             </tr>
                             <tr id="allowEscapeKey">
                                 <td>
-                                <h5>allowEscapeKey</h5>
+                                    <h5>allowEscapeKey</h5>
                                 </td>
                                 <td>boolean</td>
                                 <td>true</td>
-                                <td>Se impostato su <strong> false </strong>, l'utente non può chiudere il popup premendo il tasto <kbd>Esc</kbd>.</td>
+                                <td>Se impostato su <strong> false </strong>, l'utente non può chiudere il popup
+                                    premendo il tasto <kbd>Esc</kbd>.</td>
                             </tr>
                             <tr id="showConfirmButton">
                                 <td>
-                                <h5>showConfirmButton</h5>
+                                    <h5>showConfirmButton</h5>
                                 </td>
                                 <td>boolean</td>
                                 <td>true</td>
-                                <td>Se impostato su <strong> false </strong>, Il pulsante "conferma"  non verrà mostrato.</td>
+                                <td>Se impostato su <strong> false </strong>, Il pulsante "conferma" non verrà mostrato.
+                                </td>
                             </tr>
                             <tr id="showDenyButton">
                                 <td>
-                                <h5>showDenyButton</h5>
+                                    <h5>showDenyButton</h5>
                                 </td>
                                 <td>boolean</td>
                                 <td>false</td>
-                                <td>Se impostato su <strong> vero </strong>, verrà mostrato il pulsante "rifiuta". Può essere utile quando si desidera un popup con 3 pulsanti.</td>
+                                <td>Se impostato su <strong> vero </strong>, verrà mostrato il pulsante "rifiuta". Può
+                                    essere utile quando si desidera un popup con 3 pulsanti.</td>
                             </tr>
                             <tr id="showCancelButton">
                                 <td>
-                                <h5>showCancelButton</h5>
+                                    <h5>showCancelButton</h5>
                                 </td>
                                 <td>boolean</td>
                                 <td>false</td>
-                                <td>Se impostato su <strong> true </strong>, verrà visualizzato il pulsante "annulla".</td>
+                                <td>Se impostato su <strong> true </strong>, verrà visualizzato il pulsante "annulla".
+                                </td>
                             </tr>
                             <tr id="confirmButtonText">
                                 <td>
-                                <h5>confirmButtonText</h5>
+                                    <h5>confirmButtonText</h5>
                                 </td>
                                 <td>string</td>
                                 <td>'Ok'</td>
@@ -302,7 +337,7 @@
                             </tr>
                             <tr id="denyButtonText">
                                 <td>
-                                <h5>denyButtonText</h5>
+                                    <h5>denyButtonText</h5>
                                 </td>
                                 <td>string</td>
                                 <td>'No'</td>
@@ -310,7 +345,7 @@
                             </tr>
                             <tr id="cancelButtonText">
                                 <td>
-                                <h5>cancelButtonText</h5>
+                                    <h5>cancelButtonText</h5>
                                 </td>
                                 <td>string</td>
                                 <td>'Cancel'</td>
@@ -318,53 +353,61 @@
                             </tr>
                             <tr id="showCloseButton">
                                 <td>
-                                <h5>showCloseButton</h5>
+                                    <h5>showCloseButton</h5>
                                 </td>
                                 <td>boolean</td>
                                 <td>false</td>
-                                <td>Impostare su <strong> true </strong> per mostrare il pulsante di chiusura nell'angolo in alto a destra del popup.</td>
+                                <td>Impostare su <strong> true </strong> per mostrare il pulsante di chiusura
+                                    nell'angolo in alto a destra del popup.</td>
                             </tr>
                             <tr id="preConfirm">
                                 <td>
-                                <h5>preConfirm</h5>
+                                    <h5>preConfirm</h5>
                                 </td>
                                 <td>function | <em>undefined</em></td>
                                 <td><em>undefined</em></td>
-                                <td>Funzione da eseguire prima di confermare, può essere asincrona (returning a Promise) o sincrona. <br />
-                                Il valore restituito (o risolto nella Promise) può essere:
-                                <ul>
-                                    <li> <strong> false </strong> per impedire che la popup venga chiusa</li>
-                                    <li> qualsiasi altra cosa per passare quel valore come <strong> result.value </strong> di <strong> swal.fire () </strong> </li>
-                                    <li> <strong> Undefined </strong> per mantenere il valore predefinito</li>
-                                </ul>
-                                Vedi questo <a href="basic-examples.html#ajax-request-example">esempio di richiesta ajax</a>.</td>
+                                <td>Funzione da eseguire prima di confermare, può essere asincrona (returning a Promise)
+                                    o sincrona. <br />
+                                    Il valore restituito (o risolto nella Promise) può essere:
+                                    <ul>
+                                        <li> <strong> false </strong> per impedire che la popup venga chiusa</li>
+                                        <li> qualsiasi altra cosa per passare quel valore come <strong> result.value
+                                            </strong> di <strong> swal.fire () </strong> </li>
+                                        <li> <strong> Undefined </strong> per mantenere il valore predefinito</li>
+                                    </ul>
+                                    Vedi questo <a href="basic-examples.html#ajax-request-example">esempio di richiesta
+                                        ajax</a>.
+                                </td>
                             </tr>
                             <tr id="preDeny">
                                 <td>
-                                <h5>preDeny</h5>
+                                    <h5>preDeny</h5>
                                 </td>
                                 <td>function | <em>undefined</em></td>
                                 <td><em>undefined</em></td>
-                                <td>Funzione da eseguire prima di <em>rifiutare</em>, può essere asincrone (Promise) o sincrona. <br />
-                                Il valore restituito (o risolto) può essere:
-                                <ul>
-                                    <li> <strong> false </strong> per impedire che la popup venga chiusa</li>
-                                    <li> qualsiasi altra cosa per passare quel valore come <strong> result.value </strong> di <strong> swal.fire () </strong> </li>
-                                    <li> <strong> Undefined </strong> per mantenere il valore predefinito</li>
-                                </ul>
+                                <td>Funzione da eseguire prima di <em>rifiutare</em>, può essere asincrone (Promise) o
+                                    sincrona. <br />
+                                    Il valore restituito (o risolto) può essere:
+                                    <ul>
+                                        <li> <strong> false </strong> per impedire che la popup venga chiusa</li>
+                                        <li> qualsiasi altra cosa per passare quel valore come <strong> result.value
+                                            </strong> di <strong> swal.fire () </strong> </li>
+                                        <li> <strong> Undefined </strong> per mantenere il valore predefinito</li>
+                                    </ul>
                                 </td>
                             </tr>
                             <tr id="imageUrl">
                                 <td>
-                                <h5>imageUrl</h5>
+                                    <h5>imageUrl</h5>
                                 </td>
                                 <td>string</td>
                                 <td><em>''</em></td>
-                                <td>Aggiungi un'icona o un'immagine personalizzata alla popup. Deve contenere l'URL dell'immagine.</td>
+                                <td>Aggiungi un'icona o un'immagine personalizzata alla popup. Deve contenere l'URL
+                                    dell'immagine.</td>
                             </tr>
                             <tr id="imageAlt">
                                 <td>
-                                <h5>imageAlt</h5>
+                                    <h5>imageAlt</h5>
                                 </td>
                                 <td>string</td>
                                 <td>''</td>
@@ -372,7 +415,7 @@
                             </tr>
                             <tr id="inputPlaceholder">
                                 <td>
-                                <h5>inputPlaceholder</h5>
+                                    <h5>inputPlaceholder</h5>
                                 </td>
                                 <td>string</td>
                                 <td>''</td>
@@ -380,88 +423,105 @@
                             </tr>
                             <tr id="inputValue">
                                 <td>
-                                <h5>inputValue</h5>
+                                    <h5>inputValue</h5>
                                 </td>
                                 <td>string</td>
                                 <td>''</td>
                                 <td>
-                                <p>Valore iniziale del campo di input.</p>
-                    
-                                <ul>
-                                    <li> Se il tipo di input è <code>select</code>, inputValue rappresenterà la <code> &lt;opzion&gt; & nbsp; </code> selezionata. </li>
-                                    <li> Se il tipo di input è <code>checkbox</code> InputValue rappresenterà lo stato selezionato (true/false). </li>
-                                    <li> Se il tipo di input è <code>text</code>, <code>email</code>, <code>numero</code> o <code>textarea</code> 
-                                        inputValue rappresenta il valore iniziale del campo. </li></ul>                                </td>
+                                    <p>Valore iniziale del campo di input.</p>
+
+                                    <ul>
+                                        <li> Se il tipo di input è <code>select</code>, inputValue rappresenterà la
+                                            <code> &lt;opzion&gt; & nbsp; </code> selezionata. </li>
+                                        <li> Se il tipo di input è <code>checkbox</code> InputValue rappresenterà lo
+                                            stato selezionato (true/false). </li>
+                                        <li> Se il tipo di input è <code>text</code>, <code>email</code>,
+                                            <code>numero</code> o <code>textarea</code>
+                                            inputValue rappresenta il valore iniziale del campo. </li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr id="inputOptions">
                                 <td>
-                                <h5>inputOptions</h5>
+                                    <h5>inputOptions</h5>
                                 </td>
                                 <td>object</td>
                                 <td>{}</td>
                                 <td>Se <code>input</code> è impostato su <strong>"select"</strong> o
-                                    <strong>"radio"</strong>, puoi fornire l'elenco delle opzioni disponibili. È un oggetto semplice, 
-                                    in cui le proprietà rappresentano il testo delle opzioni e i valori i valori dell'opzione.</td>
+                                    <strong>"radio"</strong>, puoi fornire l'elenco delle opzioni disponibili. È un
+                                    oggetto semplice,
+                                    in cui le proprietà rappresentano il testo delle opzioni e i valori i valori
+                                    dell'opzione.
+                                </td>
                             </tr>
                             <tr id="inputAttributes">
                                 <td>
-                                <h5>inputAttributes</h5>
+                                    <h5>inputAttributes</h5>
                                 </td>
                                 <td>object</td>
                                 <td>{}</td>
-                                <td>Attributi HTML del campo di input HTML (ad es. <strong>min</strong>, <strong>max</strong>, 
-                                    <strong>autocomplete</strong>, <strong>accept</strong>), che vengono aggiunti al campo di input. L
-                                    e chiavi dell'oggetto rappresenteranno i nomi degli attributi, i valori delle proprietà rappresenteranno 
-                                    i valori degli attributi.</td>
+                                <td>Attributi HTML del campo di input HTML (ad es. <strong>min</strong>,
+                                    <strong>max</strong>,
+                                    <strong>autocomplete</strong>, <strong>accept</strong>), che vengono aggiunti al
+                                    campo di input. L
+                                    e chiavi dell'oggetto rappresenteranno i nomi degli attributi, i valori delle
+                                    proprietà rappresenteranno
+                                    i valori degli attributi.
+                                </td>
                             </tr>
                             <tr id="validationMessage">
                                 <td>
-                                <h5>validationMessage</h5>
+                                    <h5>validationMessage</h5>
                                 </td>
                                 <td>string</td>
                                 <td>''</td>
-                                <td>Un messaggio di convalida personalizzato per la convalida predefinita (tipi di input e -mail e URL).</td>
+                                <td>Un messaggio di convalida personalizzato per la convalida predefinita (tipi di input
+                                    e -mail e URL).</td>
                             </tr>
                             <tr id="willOpen">
                                 <td>
-                                <h5>willOpen</h5>
+                                    <h5>willOpen</h5>
                                 </td>
                                 <td>function | <em>undefined</em></td>
                                 <td><em>undefined</em></td>
-                                <td>Funziona sincrona che viene lanciata prima che il popup venga mostrato sullo schermo. Fornisce l'elemento 
+                                <td>Funziona sincrona che viene lanciata prima che il popup venga mostrato sullo
+                                    schermo. Fornisce l'elemento
                                     DOM popup come argomento.</td>
                             </tr>
                             <tr id="didOpen">
                                 <td>
-                                <h5>didOpen</h5>
+                                    <h5>didOpen</h5>
                                 </td>
                                 <td>function | <em>undefined</em></td>
                                 <td><em>undefined</em></td>
-                                <td>Funziona sincrona che viene lanciata dopo che la popup è  mostrata sullo schermo. Fornisce l'elemento 
+                                <td>Funziona sincrona che viene lanciata dopo che la popup è mostrata sullo schermo.
+                                    Fornisce l'elemento
                                     DOM popup come argomento.</td>
                             </tr>
                             <tr id="willClose">
                                 <td>
-                                <h5>willClose</h5>
+                                    <h5>willClose</h5>
                                 </td>
                                 <td>function | <em>undefined</em></td>
                                 <td><em>undefined</em></td>
-                                <td>Funziona sincrona che viene lanciata prima che la popup sia chiusa. Fornisce l'elemento 
+                                <td>Funziona sincrona che viene lanciata prima che la popup sia chiusa. Fornisce
+                                    l'elemento
                                     DOM popup come argomento.</td>
                             </tr>
                             <tr id="didClose">
                                 <td>
-                                <h5>didClose</h5>
+                                    <h5>didClose</h5>
                                 </td>
                                 <td>function | <em>undefined</em></td>
                                 <td><em>undefined</em></td>
-                                <td>Funziona sincrona che viene lanciata dopo che la popup è stata chiusa. Fornisce l'elemento 
+                                <td>Funziona sincrona che viene lanciata dopo che la popup è stata chiusa. Fornisce
+                                    l'elemento
                                     DOM popup come argomento.</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <h1>Methods</h1>  
+                <h1>Methods</h1>
                 <div class="table-responsive-md">
                     <table class="table table-striped">
                         <tbody>
@@ -472,181 +532,198 @@
                             </tr>
                             <tr>
                                 <td>
-                                <h5><code>Swal.isVisible()</code></h5>
+                                    <h5><code>Swal.isVisible()</code></h5>
                                 </td>
                                 <td>boolean</td>
                                 <td>Determina se la popup è visibile.</td>
                             </tr>
                             <tr>
                                 <td>
-                                <h5><code>Swal.close()</code></h5>
+                                    <h5><code>Swal.close()</code></h5>
                                 </td>
                                 <td>void</td>
-                                <td>Chiude la Popup attualmente aperta, la Promise restituita da <strong> swal.fire () </strong> sarà risolta 
-                                    con un oggetto vuoto <strong class = "NowRap"> {} </strong></td>
+                                <td>Chiude la Popup attualmente aperta, la Promise restituita da <strong> swal.fire ()
+                                    </strong> sarà risolta
+                                    con un oggetto vuoto <strong class="NowRap"> {} </strong></td>
                             </tr>
                             <tr>
                                 <td>
-                                <h5><code>Swal.getContainer()</code></h5>
+                                    <h5><code>Swal.getContainer()</code></h5>
                                 </td>
                                 <td>HTMLElement</td>
                                 <td>Restituisce il contenitore che contiene lo sfondo e la popup stessa.</td>
                             </tr>
                             <tr>
                                 <td>
-                                <h5><code>Swal.getTitle()</code></h5>
+                                    <h5><code>Swal.getTitle()</code></h5>
                                 </td>
                                 <td>HTMLElement</td>
                                 <td>Restituisce il titolo della popup.</td>
                             </tr>
                             <tr>
                                 <td>
-                                <h5><code>Swal.getCloseButton()</code></h5>
+                                    <h5><code>Swal.getCloseButton()</code></h5>
                                 </td>
                                 <td>HTMLElement</td>
                                 <td>Restituisce il pulsante Chiudi.</td>
                             </tr>
                             <tr>
                                 <td>
-                                <h5><code>Swal.getIcon()</code></h5>
+                                    <h5><code>Swal.getIcon()</code></h5>
                                 </td>
                                 <td>HTMLElement</td>
                                 <td>Restituisce l'<a href="icons.html">icon</a>.</td>
                             </tr>
                             <tr>
                                 <td>
-                                <h5><code>Swal.getHtmlContainer()</code></h5>
+                                    <h5><code>Swal.getHtmlContainer()</code></h5>
                                 </td>
                                 <td>HTMLElement</td>
-                                <td>Restituisce l'elemento DOM in cui viene reso il parametro <strong> html</strong>/<strong>text </strong>.</td>
+                                <td>Restituisce l'elemento DOM in cui viene reso il parametro <strong>
+                                        html</strong>/<strong>text </strong>.</td>
                             </tr>
                             <tr>
                                 <td>
-                                <h5><code>Swal.getImage()</code></h5>
+                                    <h5><code>Swal.getImage()</code></h5>
                                 </td>
                                 <td>HTMLElement</td>
                                 <td>Restituisce l'<a href="basic-examples.html#custom-image">immagine</a>.</td>
                             </tr>
                             <tr>
                                 <td>
-                                <h5><code>Swal.getFooter()</code></h5>
+                                    <h5><code>Swal.getFooter()</code></h5>
                                 </td>
                                 <td>HTMLElement</td>
                                 <td>Restituisce il footer della popup</td>
                             </tr>
                             <tr id="getConfirmButton">
                                 <td>
-                                <h5><code>Swal.getConfirmButton()</code></h5>
+                                    <h5><code>Swal.getConfirmButton()</code></h5>
                                 </td>
                                 <td>HTMLElement</td>
                                 <td>Restituisce il pulsante il "conferma".</td>
                             </tr>
                             <tr>
                                 <td>
-                                <h5><code>Swal.getDenyButton()</code></h5>
+                                    <h5><code>Swal.getDenyButton()</code></h5>
                                 </td>
                                 <td>HTMLElement</td>
                                 <td>Restituisce il pulsante il "rifiuta".</td>
                             </tr>
                             <tr>
                                 <td>
-                                <h5><code>Swal.getCancelButton()</code></h5>
+                                    <h5><code>Swal.getCancelButton()</code></h5>
                                 </td>
                                 <td>HTMLElement</td>
                                 <td>Restituisce il pulsante il "annulla".</td>
                             </tr>
                             <tr id="showLoading">
                                 <td>
-                                <h5><code>Swal.showLoading()</code></h5>
+                                    <h5><code>Swal.showLoading()</code></h5>
                                 </td>
                                 <td>void</td>
-                                <td>Mostra il loader (spinner). Utile nei momenti di attesa come per le richieste Ajax. <br />
-                                <br />
-                                Il loader è mostrato invece dei pulsanti nel mezzo dell'area pulsanti.</td>
+                                <td>Mostra il loader (spinner). Utile nei momenti di attesa come per le richieste Ajax.
+                                    <br />
+                                    <br />
+                                    Il loader è mostrato invece dei pulsanti nel mezzo dell'area pulsanti.
+                                </td>
                             </tr>
                             <tr id="hideLoading">
                                 <td>
-                                <h5><code>Swal.hideLoading()</code></h5>
+                                    <h5><code>Swal.hideLoading()</code></h5>
                                 </td>
                                 <td>void</td>
                                 <td>Nasconde il loader e mostra i pulsanti nascosti da .Showloading()</td>
                             </tr>
                             <tr>
                                 <td>
-                                <h5><code>Swal.isLoading()</code></h5>
+                                    <h5><code>Swal.isLoading()</code></h5>
                                 </td>
                                 <td>boolean</td>
-                                <td>Determina se il popup è nello stato di caricamento. Metodi correlati: <a class="nowrap" href="#showLoading">Swal.showLoading()</a> and <a class="nowrap" href="#hideLoading">Swal.hideLoading()</a></td>
+                                <td>Determina se il popup è nello stato di caricamento. Metodi correlati: <a
+                                        class="nowrap" href="#showLoading">Swal.showLoading()</a> and <a class="nowrap"
+                                        href="#hideLoading">Swal.hideLoading()</a></td>
                             </tr>
                             <tr id="getTimerLeft">
                                 <td>
-                                <h5><code>Swal.getTimerLeft()</code></h5>
+                                    <h5><code>Swal.getTimerLeft()</code></h5>
                                 </td>
                                 <td>number</td>
-                                <td>Restituisce il tempo rimanente nel caso in cui sia impostato il parametro timer. 
-                                    <a href="basic-examples.html#basic-timer-example">Vedi Esempio</a>.</td>
+                                <td>Restituisce il tempo rimanente nel caso in cui sia impostato il parametro timer.
+                                    <a href="basic-examples.html#basic-timer-example">Vedi Esempio</a>.
+                                </td>
                             </tr>
                             <tr id="stopTimer">
                                 <td>
-                                <h5><code>Swal.stopTimer()</code></h5>
+                                    <h5><code>Swal.stopTimer()</code></h5>
                                 </td>
                                 <td>number</td>
-                                <td>Interrompe il timer nel caso in cui è impostato il parametro timer. Restituisce il tempo rimasto.
-                                    <a href="basic-examples.html#timer-methods-example">vedi esempio</a>.</td>
+                                <td>Interrompe il timer nel caso in cui è impostato il parametro timer. Restituisce il
+                                    tempo rimasto.
+                                    <a href="basic-examples.html#timer-methods-example">vedi esempio</a>.
+                                </td>
                             </tr>
                             <tr id="resumeTimer">
                                 <td>
-                                <h5><code>Swal.resumeTimer()</code></h5>
+                                    <h5><code>Swal.resumeTimer()</code></h5>
                                 </td>
                                 <td>number</td>
                                 <td>Riprende il timer precedentemente fermato. Restituisce il tempo rimasto.
-                                    <a href="basic-examples.html#timer-methods-example">vedi esempio</a>.</td>
+                                    <a href="basic-examples.html#timer-methods-example">vedi esempio</a>.
+                                </td>
                             </tr>
                             <tr id="toggleTimer">
                                 <td>
-                                <h5><code>Swal.toggleTimer()</code></h5>
+                                    <h5><code>Swal.toggleTimer()</code></h5>
                                 </td>
                                 <td>number</td>
-                                <td>Attiva/disattiva il timer. Restituisce il tempo rimasto. 
-                                    <a href="basic-examples.html#timer-methods-example">Vedi esmpio</a>.</td>
+                                <td>Attiva/disattiva il timer. Restituisce il tempo rimasto.
+                                    <a href="basic-examples.html#timer-methods-example">Vedi esmpio</a>.
+                                </td>
                             </tr>
                             <tr id="isTimerRunning">
                                 <td>
-                                <h5><code>Swal.isTimerRunning()</code></h5>
+                                    <h5><code>Swal.isTimerRunning()</code></h5>
                                 </td>
                                 <td>boolean</td>
-                                <td>Restituisce lo stato del timer: <strong> vero </strong> se è in esecuzione, 
-                                    <strong> false </strong> se si è in pausa.</td>
+                                <td>Restituisce lo stato del timer: <strong> vero </strong> se è in esecuzione,
+                                    <strong> false </strong> se si è in pausa.
+                                </td>
                             </tr>
                             <tr id="increaseTimer">
                                 <td>
-                                <h5><code>Swal.increaseTimer(number n)</code></h5>
+                                    <h5><code>Swal.increaseTimer(number n)</code></h5>
                                 </td>
                                 <td>number</td>
-                                <td>Aumenta il timer di <strong> n </strong> millisecondi. Restituisce il tempo rimasto. 
-                                    <a href="basic-examples.html#timer-methods-example">Vedi esempio</a>.</td>
+                                <td>Aumenta il timer di <strong> n </strong> millisecondi. Restituisce il tempo rimasto.
+                                    <a href="basic-examples.html#timer-methods-example">Vedi esempio</a>.
+                                </td>
                             </tr>
                             <tr>
                                 <td>
-                                <h5><code>Swal.getInput()</code></h5>
+                                    <h5><code>Swal.getInput()</code></h5>
                                 </td>
                                 <td>HTMLElement</td>
-                                <td>Restituisce il nodo DOM di input, questo metodo funziona con il parametro di input.</td>
+                                <td>Restituisce il nodo DOM di input, questo metodo funziona con il parametro di input.
+                                </td>
                             </tr>
                             <tr>
                                 <td>
-                                <h5><code>Swal.getInputValue()</code></h5>
+                                    <h5><code>Swal.getInputValue()</code></h5>
                                 </td>
                                 <td>boolean | string</td>
-                                <td>Restituisce il valore dell'input. Se l'input è testo, e-mail, password, numero, textarea, URL o select 
-                                    restituisce il <code>value </code> dell'elemento, se l'input è una checkbox restituisce lo stato della 
+                                <td>Restituisce il valore dell'input. Se l'input è testo, e-mail, password, numero,
+                                    textarea, URL o select
+                                    restituisce il <code>value </code> dell'elemento, se l'input è una checkbox
+                                    restituisce lo stato della
                                     checkbox (true|false), se l'input è un gruppo di radio buttons restituisce il
-                                    <code>value</code> dell'opzione selezionata o <code>NULL</code> Se nessuno opzione è selezionata.
+                                    <code>value</code> dell'opzione selezionata o <code>NULL</code> Se nessuno opzione è
+                                    selezionata.
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                <h5><code>Swal.showValidationMessage(string message)</code></h5>
+                                    <h5><code>Swal.showValidationMessage(string message)</code></h5>
                                 </td>
                                 <td>void</td>
                                 <td>Mostra un messaggio di errore all'interno del nodo DOM del messaggio di convalida.
@@ -654,31 +731,31 @@
                             </tr>
                             <tr>
                                 <td>
-                                <h5><code>Swal.getValidationMessage()</code></h5>
+                                    <h5><code>Swal.getValidationMessage()</code></h5>
                                 </td>
                                 <td>HTMLElement</td>
                                 <td>Restituisce il nodo DOM del messaggio di convalida.</td>
                             </tr>
                         </tbody>
                     </table>
-                    </div>
-                                 
+                </div>
+
             </div>
-            
+
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js" 
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"
         integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha256-GRJrh0oydT1CwS36bBeJK/2TggpaUQC6GzTaTQdZm0k=" crossorigin="anonymous"></script>
-    
+
     <script src="assets/js/swalstrap_all.js"></script>
-    
+
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-    
+
 </body>
 
 </html>

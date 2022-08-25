@@ -15,7 +15,7 @@ Per utilizzare Swalstrap devi applicare il metodo fire() all'istanza creata:
     Swal.fire('Wanderful!','Swalstrap is working!','success')
 </script>
 ```
-Se preferisci caricare separatamente il foglio di stile (o caricarne uno personalizzato):
+Se preferisci caricare separatamente il foglio di stile (o caricarne uno personalizzato)
 ```
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap4@1.0.0/dist/css/swalstrap.min.css">
 ```
