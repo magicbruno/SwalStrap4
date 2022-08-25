@@ -1,11 +1,10 @@
 # Swalstrap for Bootstrap 4
-A Swetalert and Bootbox alternative build on Bootstrap 4 Modal and Toast components. Are you using Bootstrap 5? [Go here](https://github.com/magicbruno/SwalStrap5).
+A Swetalert and Bootbox alternative, built on Bootstrap 4 Modal and Toast components. Are you using Bootstrap 5? [Go here](https://github.com/magicbruno/SwalStrap5).
 
 ## Getting started 
 Load Swalstrap form CDN:
 
 ```
-
 <script src="https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap4@1.0.0/dist/js/swalstrap_all.min.js"></script>
 ```
 swalstrap_all.js will load automatically Swalstrap stylesheet and will create a default instance of Swalstrap class named Swal (and also aliased as swal, Sweetalert and sweetalert).
@@ -40,7 +39,7 @@ Alternatively you can install package via npm:
 ```
 npm install @magicbruno/swalstrap4@1.0.0
 ```
-clone the git package:
+clone the git repository:
 ```
 git clone https://github.com/magicbruno/SwalStrap4.git
 ```

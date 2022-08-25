@@ -1,9 +1,8 @@
 <h1 id="swalstrap-for-bootstrap-4">Swalstrap for Bootstrap 4</h1>
-<p>A Swetalert and Bootbox alternative build on Bootstrap 4 Modal and Toast components. Are you using Bootstrap 5? <a href="https://github.com/magicbruno/SwalStrap5">Go here</a>.</p>
+<p>A Swetalert and Bootbox alternative, built on Bootstrap 4 Modal and Toast components. Are you using Bootstrap 5? <a href="https://github.com/magicbruno/SwalStrap5">Go here</a>.</p>
 <h2 id="getting-started">Getting started</h2>
 <p>Load Swalstrap form CDN:</p>
-<pre><code>
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap4@1.0.0/dist/js/swalstrap_all.min.js&quot;&gt;&lt;/script&gt;
+<pre><code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap4@1.0.0/dist/js/swalstrap_all.min.js&quot;&gt;&lt;/script&gt;
 </code></pre>
 <p>swalstrap_all.js will load automatically Swalstrap stylesheet and will create a default instance of Swalstrap class named Swal (and also aliased as swal, Sweetalert and sweetalert).</p>
 <p>You can use Swalstrap applying fire method to the created instance:</p>
@@ -30,7 +29,7 @@
 <p>Alternatively you can install package via npm:</p>
 <pre><code>npm install @magicbruno/swalstrap4@1.0.0
 </code></pre>
-<p>clone the git package:</p>
+<p>clone the git repository:</p>
 <pre><code>git clone https://github.com/magicbruno/SwalStrap4.git
 </code></pre>
 <p>or <a href="https://github.com/magicbruno/SwalStrap4/archive/refs/heads/main.zip">download it</a>.</p>

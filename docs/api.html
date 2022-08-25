@@ -64,8 +64,9 @@
     <div class="d-flex flex-column justify-content-between align-items-stretch min-vh-100" style="padding-top: 62px">
         <div class="text-white bg-secondary py-5 flex-grow-0">
             <div class="container">
-                <h1 class="display-3 mb-4">Documentation</h1>
-
+                <h1 class="display-3 mb-4 d-flex justify-content-between align-items-center">
+                    Documentation<img src="img/gb.svg" style="height: 2rem; " alt="English flag">
+                </h1>
             </div>
         </div>
         <div class="d-flex align-items-center justify-content-evenly flex-grow-1 modal-swal">
@@ -76,7 +77,7 @@
                 <div class="mb-2">only <strong>Swalstrap</strong> <code>class</code> wil be loaded. To use Swalstrap you must load swalstrap 
                     stylesheet:</div>
                 <pre class="mb-2"><code class="language-html hljs">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap5@1.0.8/docs/assets/css/swalstrap.min.css&quot;&gt;</code></pre>
-                <div class="mb-2">and create at list an instance of Swalstrap class:</div>
+                <div class="mb-2">and create at least an instance of Swalstrap class:</div>
                 <pre class="mb-2"><code class="language-html hljs">&lt;script&gt;
     const mySwal = new Swalstrap();
 &lt;/script&gt;</code></pre>  
@@ -138,7 +139,7 @@
                                 </td>
                                 <td>'warning' | 'error' | 'success' | 'info' | 'question' | <em>undefined</em></td>
                                 <td><em>undefined</em></td>
-                                <td>The icon of the popup. Swalstrap comes with 5 built-in icon which will show a corresponding icon animation: <strong>warning</strong>, <strong>error</strong>, <strong>success</strong>, <strong>info</strong>, and <strong>question</strong>.</td>
+                                <td>The icon of the popup. Swalstrap comes with 5 built-in icons which will show a corresponding icon animation: <strong>warning</strong>, <strong>error</strong>, <strong>success</strong>, <strong>info</strong>, and <strong>question</strong>.</td>
                             </tr>
                             <tr id="footer">
                                 <td>
@@ -170,8 +171,9 @@
                                 </td>
                                 <td>'primary' | 'secondary' | 'success' | 'info' | 'danger' | 'warning' | 'dark' | 'auto' | ''</td>
                                 <td>''</td>
-                                <td>By default toast background color is inherited form Bootstrap. Setting toastStyle, toast background are styled 
-                                    using bootstrap styles. Icon and foreground color will be white. If 'auto', toast style is determined by icon type. 
+                                <td>By default toast background color is inherited form Bootstrap. If you set <code>toastStyle</code>, toast background 
+                                    are styled using bootstrap colors. Icon and foreground color will be white. If <code>toastStyle</code> is 'auto', 
+                                    toast style is determined by icon type. 
                                 </td>
                             </tr>
                             <tr id="input">
@@ -181,7 +183,9 @@
                                 <p>'text' | 'email' | 'password' | 'number' | 'textarea' | 'select' | 'radio' | 'checkbox' | 'file' | 'url' | <em>undefined</em></p>
                                 </td>
                                 <td><em>undefined</em></td>
-                                <td>Input field type, can be <strong>text</strong>, <strong>email</strong>, <strong>password</strong>, <strong>number</strong>, <strong>textarea</strong>, <strong>select</strong>, <strong>radio</strong>, <strong>checkbox</strong>, <strong>file</strong> and <strong>url</strong>.</td>
+                                <td>Input field type, can be <strong>text</strong>, <strong>email</strong>, <strong>password</strong>, 
+                                    <strong>number</strong>, <strong>textarea</strong>, <strong>select</strong>, <strong>radio</strong>, 
+                                    <strong>checkbox</strong>, <strong>file</strong> and <strong>url</strong>.</td>
                             </tr>
                             <tr id="position">
                                 <td>
@@ -191,7 +195,11 @@
                                 <p>'top' | 'top-start' | 'top-end' | 'center' | 'center-start' | 'center-end' | 'bottom' | 'bottom-start' | &nbsp;'bottom-end'</p>
                                 </td>
                                 <td>&nbsp;</td>
-                                <td>Toast position, can be <strong>'top'</strong>, <strong>'top-start'</strong>, <strong>'top-end'</strong>, <strong>'center'</strong>, <strong>'center-start'</strong>, <strong>'center-end'</strong>, <strong>'bottom'</strong>, <strong>'bottom-start'</strong>, or <strong>'bottom-end', </strong>popup position can be <strong>'center' </strong>or <strong>'top' </strong>(other setting will be ignored)</td>
+                                <td>Toast position, can be <strong>'top'</strong>, <strong>'top-start'</strong>, <strong>'top-end'</strong>, 
+                                    <strong>'center'</strong>, <strong>'center-start'</strong>, <strong>'center-end'</strong>, 
+                                    <strong>'bottom'</strong>, <strong>'bottom-start'</strong>, or <strong>'bottom-end'. 
+                                    </strong>Popup position can be <strong>'center' </strong>or <strong>'top' </strong>(all other settings will be ignored)
+                                </td>
                             </tr>
                             <tr id="customClass">
                                 <td>
@@ -199,7 +207,7 @@
                                 </td>
                                 <td>object</td>
                                 <td>{}</td>
-                                <td>A custom CSS class for the popup. These are th default classes:
+                                <td>A custom CSS class for the popup. These are the default classes:
                                 <pre>
                     <code class="language-javascript">{
     container: '',
@@ -350,7 +358,7 @@
                                 </td>
                                 <td>string</td>
                                 <td><em>''</em></td>
-                                <td>Add a customized icon ore image for the popup. Should contain a string with the path or URL to the image.</td>
+                                <td>Add a customized icon or image for the popup. Should contain a string with the path or URL to the image.</td>
                             </tr>
                             <tr id="imageAlt">
                                 <td>
@@ -390,7 +398,9 @@
                                 </td>
                                 <td>object</td>
                                 <td>{}</td>
-                                <td>If <strong>input</strong> parameter is set to <strong>&quot;select&quot;</strong> or <strong>&quot;radio&quot;</strong>, you can provide options. Can be a plain object, with keys that represent option values and values that represent option text.</td>
+                                <td>If <strong>input</strong> parameter is set to <strong>&quot;select&quot;</strong> or 
+                                    <strong>&quot;radio&quot;</strong>, you can provide options. Can be a plain object, 
+                                    with keys that represent option values and values that represent option text.</td>
                             </tr>
                             <tr id="inputAttributes">
                                 <td>
@@ -543,7 +553,7 @@
                                 <td>void</td>
                                 <td>Shows loader (spinner), this is useful with AJAX requests.<br />
                                 <br />
-                                By default the loader be shown instead of the &quot;Confirm&quot; button, but if you want another button to be replaced with a loader, just pass it like this: <strong class="nowrap">Swal.showLoading(Swal.getDenyButton())</strong></td>
+                                The loader be shown instead of buttons in the middle of the <em>action area</em>.</td>
                             </tr>
                             <tr id="hideLoading">
                                 <td>
