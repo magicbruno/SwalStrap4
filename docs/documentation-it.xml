@@ -10,7 +10,7 @@
     Swal.fire(&#39;Wanderful!&#39;,&#39;Swalstrap is working!&#39;,&#39;success&#39;)
 &lt;/script&gt;
 </code></pre>
-<p>Se preferisci caricare separatamente il foglio di stile (o caricarne uno personalizzato):</p>
+<p>Se preferisci caricare separatamente il foglio di stile (o caricarne uno personalizzato)</p>
 <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@magicbruno/swalstrap4@1.0.0/dist/css/swalstrap.min.css&quot;&gt;
 </code></pre>
 <p>devi usare swalstrap.js:</p>

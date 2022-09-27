@@ -1,10 +1,10 @@
 /**********************************************
- * SWALSTRAP 5
- * Sweetalert for Boostrap 5.x.x
+ * SWALSTRAP 4
+ * Sweetalert for Boostrap 4.x.x
  * (c) Bruno Migliaretti 2022
  * https://github.com/magicbruno/SwalStrap5
  * 
- * Version 1.0.8
+ * Version 1.0.1
  **********************************************/
 (function (doc, win) {
     "use strict";
@@ -87,7 +87,7 @@
         toastStyle = '';
 
         // Version
-        get VERSION () { return '1.0.8' };
+        get VERSION () { return '1.0.1' };
 
         /**
          * Property: classes used for new popups/toasts created with fire method.
@@ -150,7 +150,7 @@
 
             switch (errorId) {
                 case NO_BOOTSTRAP:
-                    console.error('Error: Bootstrap 5.x.x not found!');
+                    console.error('Error: Bootstrap 4.x.x not found!');
                     break;
                 case INVALID_PARAMETER:
                     console.error('Error: Invalid parameter!');
@@ -159,10 +159,10 @@
                     console.warn(`Warning: Invalid option! ${message}`);
                     break;
                 case NO_BOOTSTRAP_MODAL:
-                    console.error('Error: Bootstrap Modal 5.x.x not found!');
+                    console.error('Error: Bootstrap Modal 4.x.x not found!');
                     break;
                 case NO_BOOTSTRAP_TOAST:
-                    console.warn('Warning: Bootstrap Toast 5.x.x not found!');
+                    console.warn('Warning: Bootstrap Toast 4.x.x not found!');
                     break;
                 case VERSION_WARNING:
                     console.warn('Warning: Found not tested Bootstrap Version!');
